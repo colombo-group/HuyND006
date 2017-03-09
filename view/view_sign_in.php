@@ -1,6 +1,6 @@
 <?php
  	if(isset($_GET['erro'])){ 
- 		echo $_SESSION['erro'];
+ 		// echo $_SESSION['erro'];
  		$_SESSION['erro']++;
 
  ?>

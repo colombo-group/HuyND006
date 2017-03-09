@@ -1,10 +1,6 @@
 <?php
 if(isset($_COOKIE['ban_user'])){
-
 	session_destroy();
-	echo $_COOKIE['ban_user'];
-	echo "ok";
-
 	echo "You cannot sign in. Please, Come back after 2 hours";
 }
 else{
