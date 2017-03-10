@@ -42,7 +42,7 @@
 			<div class="col-md-7 info">
 				<input class="" type="file"  name="img">
 			</div>
-			<div class="col-md-1"><?php echo isset($_GET['erro'])?$_GET['erro']:''; ?></div>
+			<div class="col-md-1"><?php echo isset($_GET['erro'])?$_GET['erro']:'' ?></div>
 		</div>
 		<div class="row col-md-6">
 			<div class="col-md-4 title">Fullname *</div>

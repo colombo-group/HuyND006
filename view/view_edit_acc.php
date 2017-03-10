@@ -35,7 +35,7 @@
 		<div class="row col-md-6">
 			<div class="col-md-4 title">Password *</div>
 			<div class="col-md-7 info">
-				<input class="form-control" value=""  id="password2" onkeyup="check('password')" type="password" required placeholder="Enter your password again" name="password2">
+				<input class="form-control" value="<?php echo $user['pass']; ?>"  id="password2" onkeyup="check('password')" type="password" required placeholder="Enter your password again" name="password2">
 			</div>
 			<div id="check_pass2"></div>
 		</div>
