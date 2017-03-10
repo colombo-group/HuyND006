@@ -7,7 +7,6 @@ else{
 	class controller_sign_up extends controller{
 		function __construct(){
 				parent:: __construct();
-			
 				include "view/view_sign_up.php";
 		}
 	}

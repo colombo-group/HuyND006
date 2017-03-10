@@ -9,7 +9,7 @@
     <div class="col-md-3">Signing up Day <a href="index.php?p=<?php echo $page; ?>&record=<?php echo $record_per_page; ?>&act=asc_date"><img src="public/img/len.png"></a> <a href="index.php?p=<?php echo $page; ?>&record=<?php echo $record_per_page; ?>&act=desc_date"><img src="public/img/xuong.png"></a></div>
 </div>
 <!-- list acc -->
-<?php foreach($arr as $row){ ?>
+<?php  foreach($arr as $row){  ?>
 <div class="row">
     <div class="col-md-2 img">
     <?php if($row['img']!=null){ ?>
@@ -35,6 +35,12 @@
         <li><a href="index.php?record=100&p=1">100</a></li>
     </ul>
 </div>
+<?php
+
+
+ if($count>$record_per_page){
+
+ ?>
 <ul class="pagination col-md-4">
     <?php
         $i=$page;
@@ -65,5 +71,5 @@
             if($i<$num_page){
             echo "<li><a href='index.php?p=".($i+1)."&record=$record_per_page'>Next</a></li>";
         }
-    ?>
+    }?>
 </ul>

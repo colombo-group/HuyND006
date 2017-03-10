@@ -42,6 +42,7 @@
 			<div class="col-md-7 info">
 				<input class="" type="file"  name="img">
 			</div>
+			<div class="col-md-1"><?php echo isset($_GET['erro'])?$_GET['erro']:''; ?></div>
 		</div>
 		<div class="row col-md-6">
 			<div class="col-md-4 title">Fullname *</div>
@@ -160,7 +161,7 @@ function check(index) {
 			break;
 		}
 		case 'phone': {
-			if(isNaN(phone)||phone==""){
+			if(isNaN(phone)||phone==""||phone.length>=15){
 				temp[2]=0;
 				check_sub();
 				document.getElementById('check_phone').innerHTML="<i class='fa fa-times'>  </i>";
@@ -187,12 +188,13 @@ function check(index) {
 			break;
 		}
 		case 'fullname': {
-			if(reg_fullname.test(fullname)){
+			if(reg_fullname.test(fullname)&&fullname.length<=50){
 				temp[3]=1;
 				check_sub();
 				// document.write(reg_fullname.test(fullname));
 				document.getElementById('check_fullname').innerHTML="<i class='fa fa-check'> </i>";
 			}
+			
 			else {
 				temp[3]=0;
 				check_sub();

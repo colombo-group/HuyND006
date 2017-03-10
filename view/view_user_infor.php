@@ -30,7 +30,7 @@
 	if(isset($user['id'])&&isset($_SESSION['id'])&&$user['id']==$_SESSION['id']){
 		$a=true;
 	}
-	if(isset($_SESSION['id_acc'])&&($_SESSION['id_acc']==1||($_SESSION['id_acc']==2&&$user['id_acc']!=2))){
+	if(isset($_SESSION['id_acc'])&&($_SESSION['id_acc']==1||($_SESSION['id_acc']==2&&$user['id_acc']==3))){
 	 	$b=true;	
 	}
 	if($a||$b){
@@ -53,7 +53,7 @@
 	</div>
 	<div class="row">
 
-	<?php if($b&&$user['id_acc']!=2){ ?>
+	<?php if(($b&&$user['id_acc']!=2)){ ?>
 		<div class="col-md-3 content"><a href="index.php?controller=prefer&id=<?php echo $user['id']; ?>">Prefer</a></div>
 	<?php } ?>
 

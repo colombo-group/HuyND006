@@ -20,7 +20,7 @@
 		<div class="row col-md-6">
 			<div class="col-md-4 title">Password *</div>
 			<div class="col-md-7 info">
-				<input class="form-control" id="password1" value="<?php echo $user['pass']; ?>" onkeyup="check('password')" type="password" required placeholder="Password" name="password1">
+				<input class="form-control" id="password1" value="" onkeyup="check('password')" type="password" required placeholder="Password" name="password1">
 			</div>
 			<div class="col-md-1" id="check_pass1"></div>
 		</div>
@@ -35,7 +35,7 @@
 		<div class="row col-md-6">
 			<div class="col-md-4 title">Password *</div>
 			<div class="col-md-7 info">
-				<input class="form-control" value="<?php echo $user['pass']; ?>"  id="password2" onkeyup="check('password')" type="password" required placeholder="Enter your password again" name="password2">
+				<input class="form-control" value=""  id="password2" onkeyup="check('password')" type="password" required placeholder="Enter your password again" name="password2">
 			</div>
 			<div id="check_pass2"></div>
 		</div>
@@ -47,8 +47,10 @@
 				<img style="width: 100px;" src="<?php echo $user['img']; ?>">
 				<input type="hidden" name="old_img" value="<?php echo $user['img']; ?>">
 				<?php } ?>
+				<div><?php echo isset($_GET['erro'])?$_GET['erro']:''; ?></div>
 
 			</div>
+			
 		</div>
 		<div class="row col-md-6">
 			<div class="col-md-4 title">Fullname *</div>
@@ -72,7 +74,7 @@
 			<div class="col-md-1" id="check_fullname"></div>
 		</div>
 		<div class="row col-md-6">
-			<div class="col-md-4 title">Fullname *</div>
+			<div class="col-md-4 title">Birthday</div>
 			<div class="col-md-7 info">
 				<input type="date" value="<?php echo isset($user['birthday'])?$user['birthday']:''; ?>" name="birthday" class="form-control">
 			</div>

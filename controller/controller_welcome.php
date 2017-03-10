@@ -8,7 +8,7 @@
 				$pass=md5($pass);
 				$count=isset($_GET['count'])?$_GET['count']:1;
 				$acc=$this->model->fetch_one("SELECT * from tbl_acc where username='$username' or email='$username'");
-				if($username==$acc['username']||$username==$acc['email']&&$pass==$acc['pass']){
+				if(($username==$acc['username']||$username==$acc['email'])&&$pass==$acc['pass']){
 					// session_destroy();
 					if(isset($_SESSION['erro'])){
 						//bo cac session cua cac lan dang nhap sai
@@ -34,7 +34,7 @@
 					}
 					if($_SESSION['erro']==3) $_SESSION['erro']=1;
 					if(isset($_SESSION['time_sub'])&&$_SESSION['time_sub']<60){
-						setcookie('ban_user','ban',time()+7200);
+						setcookie('ban_user','ban',time()+3);
 						//huy tat ca cac session hien co
 						session_destroy();
 						//dua ra thong bao
